@@ -6,7 +6,7 @@ Questions and answers
 
      I spent one and half day on the test. Yes I would do the following things
       1. Add different types of filter for date and numeric columns instead of using same Regex based filter for all columns
-      2. Add plugable theames instead of hard coding styles.
+      2. Add plugable themes instead of hard coding styles.
       3. Expandable column width by dragging column borders
      
 2.In what ways would you adapt your component so that it could be used in many different scenarios where a data table is required
