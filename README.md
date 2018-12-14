@@ -79,7 +79,7 @@ Usage:
                    }
                 }
 
-             2. To make the third column bold abd blue
+             2. To make the third column bold and blue
 
                 table.onRender = function (row, cell, rowNo, cellNo, type) {
                   if (cellNo == 2) {
