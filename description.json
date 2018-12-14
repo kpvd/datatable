@@ -1,0 +1,12 @@
+{
+  "Name": "Vijay Daniel",
+  "Nationality": "Indian",
+  "Qualification": "Bachelor of Engineering (Computer Science)",
+  "Spoken Languages": [ "Tamil", "English", "Italian" ],
+  "Email": "k_pvd@hotmail.com",
+
+  "Experience": "10+ years web app development",
+  "Frontend Technologies": [ "JavaScript", "JQuery", "HTML", "CSS" ],
+  "Backend Technologies": [ "C#", "ASP.NET MVC", "SignalR", "Web API", "Entity Framework" ],
+  "Exposure to Technologies": [ "NodeJS", "Vue.js", "React" ]
+}
