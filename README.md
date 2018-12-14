@@ -1,3 +1,32 @@
+
+Questions and answers
+---------------------
+
+1.How long did you spend on the test? Would you do anything differently if you had more time?
+  I spent one and half day on the test. Yes I would do the following things
+     1. Add different types of filter for date and numeric columns instead of using same Regex based filter for all columns
+     2. Add plugable theames instead of hard coding styles.
+     3. Expandable column width by dragging column borders
+     
+2.In what ways would you adapt your component so that it could be used in many different scenarios where a data table is required
+     1. I would add better prender scripting to configure the datatable for many scenarios.
+     2. Ability to run scripts on change of the cell value
+     3. Frozen columns and rows
+     4. Configurable headers with main headers and sub headers
+     
+3.What is your favorite CSS property? Why?
+      NA
+      
+4.What is your favorite modern Javascript feature? Why?
+      Arrow functions is my favorite feature. It removes this binding issue.
+      
+5. What is your favorite third-party Vue.js library? Why?
+     NA
+
+
+Datatable features
+------------------
+
 This datatable implements the basic requirement expected from a datatable like 
 sorting, filtering and scripting
 
