@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Datatable</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Basic Datatable demo</h1>
+    <table id="table" ></table>
+    <script src="js/jquery.js"></script>    
+    <script src="js/testdata.js"></script>
+    <script src="js/site.js"></script>
+
+    <script>
+        let table = new DataTable("table",
+            [{ text: "ID", type: "T" },
+            { text: "Name", type: "T" },
+            { text: "Description", type: "T", edit: true },
+            { text: "Date", type: "D" },
+            { text: "Amount", type: "N" }],
+            TEST_DATA);
+
+
+
+        table.onRender = function (row, cell, rowNo, cellNo, type) {
+
+            if (cellNo == 1) {
+                cell.style = "font-weight: bold";
+            }
+
+            if (cellNo == 0) {
+                cell.style = "font-style: italic; color:grey";
+            }
+
+            if (cellNo == 2) {
+                cell.style = "font-weight: bold;color:blue";
+            }
+
+            if (type == "N" && cellNo == 4) {
+                if (parseFloat(cell.innerHTML) < 0)
+                    cell.style = "color:red;font-weight: bold";
+            }
+        }
+        table.show();
+    </script>
+
+
+</body>
+</html>
