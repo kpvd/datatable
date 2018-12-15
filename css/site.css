@@ -1,33 +1,36 @@
-﻿
+
 th {
-    background-color: lightblue;
+    background-color: azure;
     color: black;
 }
-
-
 
 thead, tbody, tr, td, th {
     display: block;
     position: relative;
 }
 
-    tr:after {
-        content: ' ';
-        display: block;
-        visibility: hidden;
-        clear: both;
-    }
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
 
-    thead th {
-        height: auto;
-    }
+thead th {
+    height: auto;
+}
 
 tbody {
     height: 500px;
     overflow-y: auto;
 }
 
-    tbody td, thead th {
-        width: 20%;
-        float: left;
-    }
+tbody td, thead th {
+    width: 20%;
+    float: left;
+}
+
+input {
+    display: table-cell;
+    width: 100%;
+}
