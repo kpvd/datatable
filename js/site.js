@@ -135,7 +135,7 @@ class DataTable {
         let hiddenRows = [];
         for (let row = 0; row <= this.rowCount; row++) {
             for (let col = 0; col <= this.colCount; col++) {
-                let filterText = $('#filter' + col).val().toLowerCase().replace("*", ".*");
+                let filterText = $('#filter' + col).val().toLowerCase();
                 const rex = new RegExp(filterText);
 
                 let cellValue = $("#cell_" + col + "_" + row).text().toLowerCase();
