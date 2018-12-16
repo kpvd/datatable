@@ -134,7 +134,7 @@ Usage:
 5. Click the table column title to sort the column 
 
 6. To filter the column, type filter text in the column input. 
-   Type "**"  to text in between (i.e 'D*ark' will match Denmark)
+   Type "\*"  to text in between (i.e 'D\*ark' will match Denmark)
 
 7. Complete example
   
