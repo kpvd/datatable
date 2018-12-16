@@ -1,4 +1,5 @@
 
+
 th {
     background-color: azure;
     color: black;
@@ -34,4 +35,5 @@ tbody td, thead th {
 input {
     display: table-cell;
     width: 100%;
+    float:left;
 }
