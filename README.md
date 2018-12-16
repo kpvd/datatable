@@ -45,6 +45,13 @@ Notes:
 
 Usage:
 
+1. Click the table column title to sort the column 
+
+2. To filter the column, type filter text in the column input. 
+   Type "\*"  to text in between (i.e 'D\*ark' will match Denmark)
+   
+Implementation:
+
 1. Create a table tag like the following with a 'id' in html
 
        <table id="my_table" ></table>
@@ -131,12 +138,9 @@ Usage:
                     }
                 }
                 
-5. Click the table column title to sort the column 
 
-6. To filter the column, type filter text in the column input. 
-   Type "\*"  to text in between (i.e 'D\*ark' will match Denmark)
 
-7. Complete example
+5. Complete example
   
         1. In HTML
 
