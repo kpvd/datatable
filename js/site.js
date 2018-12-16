@@ -76,7 +76,7 @@ class DataTable {
         for (let i = 0, len = rows.length; i < len; i++) {
             arrayOfRows[i] = {};
             arrayOfRows[i].oldIndex = i;
-            let celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML.replace(/<[^>]*>/g, "");
+            let celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML;
             arrayOfRows[i].value = celltext;
             switch (type) {
                 case "N": arrayOfRows[i].value = parseFloat(celltext); break;
