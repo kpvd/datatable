@@ -48,7 +48,7 @@ Usage:
 1. Click the table column title to sort the column 
 
 2. To filter the column, type filter text in the column input. 
-   Type "\*"  to text in between (i.e 'D\*ark' will match Denmark)
+   Type "\*"  to match text in between (i.e 'D\*ark' will match Denmark)
    
 Implementation:
 
