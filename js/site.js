@@ -1,7 +1,5 @@
-﻿// datatable class
-
+// DataTable class
 class DataTable {
-
     constructor(tableId, colTypes, tableData) {
         this.tableId = tableId;
         this.colTypes = colTypes;
@@ -24,21 +22,23 @@ class DataTable {
         tableHead.appendChild(tr);
         let colCount = 0;
         for (let col of this.colTypes) {
-
             var cell = document.createElement('th');
             var title = document.createElement("a");
             title.setAttribute("href", "#");
             title.innerHTML = col.text;
-            title.onclick = this.sortTable.bind(this, colCount, col.type);
-
+            title.onclick = this._sortTable.bind(this, colCount, col.type);
             cell.appendChild(title);
+
+            let image = document.createElement("img");
+            image.setAttribute("display", "none");
+            image.setAttribute("id", "img_" + colCount);
+            cell.appendChild(image);
+
 
             let filter = document.createElement("input");
             filter.setAttribute("type", "text");
             filter.setAttribute("id", "filter" + colCount);
-            filter.onkeyup = this.filterText.bind(this);
-            filter.setAttribute("style", "display:block");
-
+            filter.onkeyup = this._filterText.bind(this);
             cell.appendChild(filter);
 
             tr.appendChild(cell);
@@ -58,15 +58,37 @@ class DataTable {
                 row.appendChild(cell);
 
                 if (this.onRender) {
-                    this.onRender(row, cell, rowCount, colCount,this.colTypes[colCount].type,);
+                    this.onRender(row, cell, rowCount, colCount, this.colTypes[colCount].type);
                 }
             }
             tableBody.appendChild(row);
         }
     }
 
+    // Set sorting image
+    _setImage(col, order) {
+        for (let i = 0; i <= this.colCount; i++) {
+            let image = document.getElementById("img_" + i);
+            image.setAttribute("display", "none");
+            image.setAttribute("src", "");
+        }
+
+        if (order == "asc") {
+            let image = document.getElementById("img_" + col);
+            image.setAttribute("display", "block");
+            image.setAttribute("src", "./images/asc.png");
+            image.order = order;
+        }
+        if (order == "des") {
+            let image = document.getElementById("img_" + col);
+            image.setAttribute("display", "block");
+            image.setAttribute("src", "./images/des.png");
+            image.order = order;
+        }
+    }
+
     //Table sorting
-    sortTable(colCount, type) {
+    _sortTable(colCount, type) {
         let sortColumn = colCount;
         let table = document.getElementById(this.tableId);
         let tbody = table.getElementsByTagName("tbody")[0];
@@ -84,8 +106,16 @@ class DataTable {
                 default: arrayOfRows[i].value = celltext.toLowerCase();
             }
         }
-        if (sortColumn == this.lastSortedColumn) { arrayOfRows.reverse(); }
-        else {
+        if (sortColumn == this.lastSortedColumn) {
+            let img = document.getElementById("img_" + sortColumn);
+            if (img.order == "asc")
+                this._setImage(colCount, "des");
+            else
+                this._setImage(colCount, "asc");
+            arrayOfRows.reverse();
+        }
+        else {            
+            this._setImage(colCount, "asc");
             this.lastSortedColumn = sortColumn;
             arrayOfRows.sort((a, b) => {
                 let aval = a.value;
@@ -101,12 +131,11 @@ class DataTable {
     }
 
     //Filtering table rows based on filter value
-    filterText() {
+    _filterText() {
         let hiddenRows = [];
         for (let row = 0; row <= this.rowCount; row++) {
             for (let col = 0; col <= this.colCount; col++) {
                 let filterText = $('#filter' + col).val().toLowerCase().replace("*", ".*");
-
                 const rex = new RegExp(filterText);
 
                 let cellValue = $("#cell_" + col + "_" + row).text().toLowerCase();
@@ -117,7 +146,6 @@ class DataTable {
                 }
             }
         }
-
         for (let row = 0; row <= this.rowCount; row++) {
             if (hiddenRows.indexOf(row) != -1)
                 $("#row_" + row).hide();
