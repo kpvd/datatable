@@ -27,10 +27,11 @@ Questions and answers
       
 5. What is your favorite third-party Vue.js library? Why?
 
-       NA
+     NA
        
 
-Notes:
+Notes
+------
 1. This implementation is based on ES6(i.e. not supported in older browsers)
 2. This implementation is basic (i.e. JavaScript implementation is < 150 lines )
 3. The only external Javascript library used in JQuery.
@@ -45,8 +46,8 @@ Usage
 
 1. Click the table column title to sort the column 
 
-2. To filter the column, type filter text in the column input. 
-   Type "\*"  to match text in between (i.e 'D\*ark' will match Denmark)
+2. To filter the column, type filter text in the column input. Type 'yra' to match 'Kyra Lester'.
+   Type "\*"  to match text in between (i.e 'wa\*ns' will match 'Wang Stevens')
    
 3. Edit the editable column by clicking the column cell. 
    
