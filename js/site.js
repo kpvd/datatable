@@ -81,7 +81,7 @@ class DataTable {
             switch (type) {
                 case "N": arrayOfRows[i].value = parseFloat(celltext); break;
                 case "D": arrayOfRows[i].value = new Date(celltext); break;
-                default: arrayOfRows[i].value = celltext;
+                default: arrayOfRows[i].value = celltext.toLowerCase();
             }
         }
         if (sortColumn == this.lastSortedColumn) { arrayOfRows.reverse(); }
