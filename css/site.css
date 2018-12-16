@@ -2,6 +2,7 @@
 th {
     background-color: azure;
     color: black;
+    white-space: nowrap;
 }
 
 thead, tbody, tr, td, th {
