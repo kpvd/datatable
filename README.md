@@ -87,11 +87,12 @@ Implementation
      Example datatable object
 
                     let dataTable = new DataTable("my_table",
-                    [{ text: "ID", type: "T" },
-                    { text: "Name", type: "T" },
-                    { text: "Description", type: "T", edit: true },
-                    { text: "Date", type: "D" },
-                    { text: "Amount", type: "N" }],
+                       [ { text: "ID", type: "T" },
+                         { text: "Name", type: "T" },
+                         { text: "Description", type: "T", edit: true },
+                         { text: "Date", type: "D" },
+                         { text: "Amount", type: "N" }
+                       ],
                     array_data);
 
 3. Showing the datatable 
