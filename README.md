@@ -28,13 +28,7 @@ Questions and answers
 5. What is your favorite third-party Vue.js library? Why?
 
        NA
-
-Datatable features
-------------------
-
-
-This datatable implements the basic requirement expected from a datatable like 
-sorting, filtering and scripting
+       
 
 Notes:
 1. This implementation is based on ES6(i.e. not supported in older browsers)
@@ -43,14 +37,21 @@ Notes:
 4. The only external css file used is bootstrap
 
 
-Usage:
+This datatable implements the basic requirement expected from a datatable like 
+sorting, filtering and scripting
+
+Usage
+-----
 
 1. Click the table column title to sort the column 
 
 2. To filter the column, type filter text in the column input. 
    Type "\*"  to match text in between (i.e 'D\*ark' will match Denmark)
    
-Implementation:
+3. Edit the editable column by clicking the column cell. 
+   
+Implementation
+--------------
 
 1. Create a table tag like the following with a 'id' in html
 
