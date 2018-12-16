@@ -47,7 +47,7 @@ Usage
 1. Click the table column title to sort the column 
 
 2. To filter the column, type filter text in the column input. Type 'yra' to match 'Kyra Lester'.
-   Type "\*"  to match text in between (i.e 'wa\*ns' will match 'Wang Stevens')
+   Type "\.*"  to match text in between (i.e 'wa\.*ns' will match 'Wang Stevens')
    
 3. Edit the editable column by clicking the column cell. 
    
