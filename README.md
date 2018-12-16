@@ -130,8 +130,13 @@ Usage:
                         cell.style = "color:red;font-weight: bold";
                     }
                 }
+                
+5. Click the table column title to sort the column 
 
-4. Complete example
+6. To filter the column, type filter text in the column input. 
+   Type '*' to text in between (i.e 'D*ark' will match Denmark)
+
+7. Complete example
   
         1. In HTML
 
