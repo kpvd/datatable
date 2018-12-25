@@ -29,6 +29,8 @@ Questions and answers
 
      NA
        
+Deployed version of test project: https://kpvd.github.io/simpledatatable/
+-
 
 Notes
 ------
