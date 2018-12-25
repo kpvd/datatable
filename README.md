@@ -31,6 +31,9 @@ Questions and answers
        
 Deployed version of test project: https://kpvd.github.io/simpledatatable/
 -
+To deploy the project manually, Download the zip of this repo and unzip it. Then click index.html
+-
+
 
 Notes
 ------
