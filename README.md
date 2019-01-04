@@ -19,7 +19,7 @@ Questions and answers
      
 3.What is your favorite CSS property? Why?
 
-      NA
+      'display' is my favorite CSS property. It provides so many options for layout.
       
 4.What is your favorite modern Javascript feature? Why?
 
